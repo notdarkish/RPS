@@ -1,0 +1,14 @@
+from abc import ABC, abstractmethod
+
+class Sujet(ABC):
+    def __init__(self):
+        self._observateurs = []
+
+    def abonner(self, observateur):
+        self._observateurs.append(observateur)
+
+    def desabonner(self, observateur):
+        self._observateurs.remove(observateur)
+
+    def notifier(self):
+        pass
